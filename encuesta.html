@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encuesta - San Francisco Magú</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Encuesta Comunitaria</h1>
+    <button id="menuToggle" class="menu-toggle">☰ Menú</button>
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="lugares.html">Lugares Más Visitados</a></li>
+        <li><a href="Impuesto.html">Impuesto ("Peso")</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="encuesta">
+      <form id="encuestaForm" action="guardar_respuestas.php" method="POST">
+        <p><strong>1. ¿Cuál es tu nombre?</strong></p>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required /><br /><br />
+
+        <p><strong>2. ¿Cuál es tu edad?</strong></p>
+        <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad" required /><br /><br />
+
+        <p><strong>3. ¿Qué tan satisfecho estás con los servicios de la página?</strong></p>
+        <label><input type="radio" name="satisfaccion" value="muy_satisfecho" required /> Muy satisfecho</label><br />
+        <label><input type="radio" name="satisfaccion" value="satisfecho" /> Satisfecho</label><br />
+        <label><input type="radio" name="satisfaccion" value="insatisfecho" /> Insatisfecho</label><br /><br />
+
+        <p><strong>4. ¿Qué aspecto de la página mejorarías?</strong></p>
+        <input type="text" name="mejora" id="comentario" placeholder="Escribe tu respuesta" /><br /><br />
+
+        <button type="submit">Enviar respuestas</button>
+      </form>
+
+      <br />
+
+      <form action="ver_comentarios.php" method="get">
+        <button type="submit">Ver Comentarios</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

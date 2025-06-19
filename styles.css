@@ -1,0 +1,242 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: margin-left 0.3s ease;
+}
+
+header {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUtjOugNg1tsTSglvO52Yehy-XbKrMgjuXzJrG1lFaBB5c7sK0gDS6jw&s=10') no-repeat center center/cover;
+  color: #800000;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-toggle {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+nav.menu {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background-color: #800000;
+  overflow-y: auto;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+nav.menu.open {
+  left: 0;
+}
+
+nav.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.menu ul li {
+  margin: 15px 0;
+}
+
+nav.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+nav.menu ul li a:hover {
+  background-color: #a00000;
+}
+
+main {
+  padding: 20px;
+  background: white;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0px 0px 10px #aaa;
+  transition: margin-left 0.3s ease;
+}
+
+body.menu-open main {
+  margin-left: 220px;
+}
+
+@media (max-width: 768px) {
+  nav.menu {
+    width: 180px;
+  }
+
+  nav.menu.open {
+    left: 0;
+  }
+
+  main {
+    width: 95%;
+  }
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: #800000;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inicio:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+}
+
+.imagen-lugar {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 10px 0 15px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+main section,
+.evento,
+.lugar {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff8f8;
+  border-left: 5px solid #800000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+main section h2,
+main section h3,
+.evento h2,
+.lugar h2,
+.lugar h3 {
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+main section p,
+.evento p,
+.lugar p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+main section a,
+.evento a,
+.lugar a {
+  color: #800000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main section a:hover,
+.evento a:hover,
+.lugar a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a {
+  display: inline-block;
+  background-color: #800000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+}
+
+.imagen-interactiva {
+  width: 200px;
+  transition: transform 0.2s ease, border 0.2s ease;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.imagen-interactiva.marcada {
+  border-color: purple;
+}
+
+.imagen-interactiva:active {
+  transform: scale(1.2);
+}
+.form-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #800000;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+.comentario {
+  background-color: #fff9f9;
+  padding: 15px;
+  border-left: 4px solid #800000;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.respuesta {
+  background-color: #fbeaea;
+  border-left: 4px solid #800000;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.respuesta-form {
+  margin-top: 10px;
+}
+
+.respuesta-form textarea {
+  width: 100%;
+  border: 2px solid #800000;
+  border-radius: 6px;
+  padding: 6px;
+  resize: vertical;
+}
+ver-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
